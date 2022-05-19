@@ -1,2 +1,2 @@
-# tecnomultimedia1
+# tecnomultimedia
 Repositorio de la materia Tecnologia Multimedial 1
