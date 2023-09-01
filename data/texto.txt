@@ -1,7 +1,0 @@
-﻿Click to roll credits
-Made by Ines Rozankovic
-Inspired by the game “Stitch speed chase”
-Technical Director = John White
-Audio Director = Amanda Reign
-Programmers = Mariana Guzman Natalie Raymond and Louis Williams
-Press ‘n’ to go back to the menu
