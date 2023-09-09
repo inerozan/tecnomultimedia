@@ -1,7 +1,7 @@
     //TP4
     //Alumna Ines Rozankovic
     //Legajo 91470/0
-    //link a video explicativo: 
+    //link a video explicativo: https://youtu.be/nC86FX22jUw
 
 let estado,x=250;
 let vec= [];
