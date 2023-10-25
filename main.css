@@ -1,0 +1,155 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&display=swap');
+
+
+body, h1, li{
+padding: 0%;
+margin: 0%;
+}
+
+body{
+    background-color: rgb(255, 253, 244);
+}
+
+
+header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(10, 10, 10);
+    font-size: 250%;
+    font-family: 'Libre Franklin', sans-serif;  
+    text-align: center;
+    background-color:rgb(255, 253, 244);
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 90%;
+}
+
+nav{
+    border-bottom: 3px solid #df1d63;
+    background-color:rgb(255, 253, 244);
+}
+
+nav a{ 
+    text-decoration: none;
+    color: rgb(71, 71, 78);
+    padding: 15px;
+    font-size: larger;
+    font-family: 'Libre Franklin', sans-serif;  
+    font-style: medium;
+    font-weight: 500;
+}
+
+nav a:hover{ 
+    color: #df1d63;
+}
+
+div{
+    width: 1250px;
+    max-width: 95%;
+    margin: 0 auto;   
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+h2{
+    font-family: 'Libre Franklin', sans-serif;  
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    color: #df1d63;
+    padding-top: 25px;
+}
+
+footer{
+    color: white;
+    background-color: #df1d63;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+    font-style: medium;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.destaca-azul{
+    color: #5309f2;
+}
+
+.imagenes{
+    width: 700pxs;
+    height: 467px;
+}
+
+.centered-list{
+    text-align: center;
+}
+
+.vinculo{
+    color:rgb(255, 255, 248);
+    font-family: 'Libre Franklin', sans-serif;
+    font-style: medium;
+    font-weight: 500;
+    font-size: medium;
+  }
+  
+  .ine{
+    color:#df1d63;
+  }
+
+  .vinculo:hover{
+    color:rgb(255, 190, 224);
+    text-decoration: none;
+  }
+
+  p{
+    text-align: justify;
+    font-family: 'Libre Franklin', sans-serif;  
+    font-style: normal;
+    font-weight: 400;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+
+
+  img{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .content{
+    flex: 1; 
+  text-align: left;
+  padding: 0;
+  }
+
+  .contenedor{
+  display: flex;
+  padding: 0;
+  }
+
+  .imagen{
+    float: right;
+    width: 200px;
+    height: 404px;
+    margin-top: 90px;
+    margin-right: 50px;
+    margin-left: 40px;
+    align-items: center;
+    clear: both;
+  }
+
+html{
+    scroll-behavior: smooth;
+    transition-duration: 10s;
+}
