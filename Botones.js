@@ -1,6 +1,6 @@
 class Botones{
   
-  constructor(posX, posY, r, x, x1, y, y1, ancho, alto){
+  constructor(posX, posY, r, x, x1, y, y1, ancho, alto, color){
   this.posX = posX;
   this.posY = posY;
   this.r = r;
@@ -16,13 +16,13 @@ class Botones{
    
  }
  
-  botonCircular(posX, posY, r) {
+  botonCircular(posX, posY, r, col1, col2) {
   
     //BOTON CREDITO REDONDO
     if (this.estoyDentrodeBotonCircular(posX, posY, r/2) ) {
-      fill( 255);
+      fill(col1);
     } else {
-      fill(0 ); //verde
+      fill(col2); //verde
     }
     
        noStroke();
