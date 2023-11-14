@@ -65,8 +65,8 @@ class Pantallas {
     else if (this.estado=="P04") {
       image(this.imgArray[0], 0, 0, 600, 600);
       this.textoFlotando(2, 100, 265, 220, 200 );
-      this.botones.botonCircular(500, 100, 120, 255, 180); 
-      this.botones.botonCircular(100, 500, 120, 255, 180);
+      this.botones.botonCircular(500, 100, 90, 255, 180); 
+      this.botones.botonCircular(100, 500, 90, 255, 180);
     }
 
     //SI COMPR0 EL MOÑO
@@ -80,7 +80,7 @@ class Pantallas {
     //SI REGALA LA MONEDA
     else if (this.estado=="P06") {
       image(this.imgArray[1], 0, 0, 600, 600);
-      this.botones.botonCircular(100, 70, 100, 255, 180);
+      this.botones.botonCircular(100, 70, 90, 255, 180);
       this.textoFlotando(13, 230, 250, 250, 200);
     }
 
@@ -88,8 +88,8 @@ class Pantallas {
     else if (this.estado=="P07") {
       image(this.imgArray[4], 0, 0, 600, 600);
       this.textoFlotando(4, 290, 190, 220, 200 );
-      this.botones.botonCircular(100, 100, 120, 255, 180); 
-      this.botones.botonCircular(500, 500, 120, 255, 180);
+      this.botones.botonCircular(100, 100, 90, 255, 180); 
+      this.botones.botonCircular(500, 500, 90, 255, 180);
     }
 
    //VA AL DENTISTA-LE SACAN LAS MUELAS
@@ -145,51 +145,74 @@ class Pantallas {
       this.botones.botonCuadrado (470, 470+60, 475, 475+40, 60, 40);
       text("Seguir", 500, 500);
     }
-
   
-    ////RATITA SE CASA FIN
-    //else if (this.estado=="P15") {
-    //  image(this.imgArray[11], 0, 0, 600, 600);
-    //}
+     //RATON LA RESCATA
+    else if (this.estado=="P14") {
+      image(this.imgArray[14], 0, 0, 600, 600);      
+      this.cuadradoDeTexto(0, 450, 280, 185, 11, 10, 420, 250, 200 );     
+      this.botones.botonCuadrado (470, 470+60, 475, 475+40, 60, 40);
+      
+    }
+    
+    //RATITA SE CASA FIN
+    else if (this.estado=="P15") {
+      image(this.imgArray[11], 0, 0, 600, 600);
+      this.cuadradoDeTexto(225, 27, 160, 60, 12, 205, 50, 200, 50 );
+      this.botones.botonCircular(310, 530, 90, 255, 180);
+    }
 
     //RATITA SALE EN LAS NOTICIAS
     else if (this.estado=="P16") {
+      //HAY QUE CAMBIAR LA IMAGEN 
       image(this.imgArray[19], 0, 0, 600, 600);      
-      this.botones.botonCircular(450, 100, 120, 255, 180); 
-      this.botones.botonCircular(100, 100, 120, 255, 180); 
+      this.textoFlotando(14, 310, 180, 260, 160);
+      this.botones.botonCircular(300, 500, 90, 255, 180); 
+      this.botones.botonCircular(100, 500, 90, 255, 180); 
+      
     }
 
     //RATITA DESCUBRE Q SON RE TURBIOS
     else if (this.estado=="P17") {
-      image(this.imgArray[7], 0, 600, 600);
+      image(this.imgArray[7],0, 0, 600, 600);      
+      this.cuadradoDeTexto(350, 23, 215, 120, 15, 360, 50, 200, 150 ); 
+      this.botones.botonCircular(225, 530, 90, 255, 180); 
     }
 
     //RATITA DESCUBRE Q SON RE HUMILDES
     else if (this.estado=="P18") {
       image(this.imgArray[20], 0, 0, 600, 600);
-      this.textoFlotante(18, 310, 15, 220, 160);
+      this.cuadradoDeTexto(300, 23, 255, 165, 18, 308, 50, 240, 180); 
+      this.botones.botonCircular(225, 530, 90, 255, 180); 
     }
 
     //RATITA REFLECCIONA
     else if (this.estado=="P19") {
+      image(this.imgArray[9],  0, 0, 600, 600);
+      this.cuadradoDeTexto(85, 450, 430, 140, 16, 95, 477, 410, 200 );
+      this.botones.botonCircular(520, 75, 100, 255, 180); 
+      this.botones.botonCircular(70, 75, 90, 255, 180); 
+      
     }
 
     //RATITA SE DEPRIME
     else if (this.estado=="P20") {
+      image(this.imgArray[16], 0, 0, 600, 600);
+      this.cuadradoDeTexto(85, 460, 430, 120, 17, 98, 490, 400, 200);
+      this.botones.botonCircular(305, 400, 90, 255, 180); 
     }
 
     //RATITA SIGUE ADELANTE
     else if (this.estado=="P21") {
+      image(this.imgArray[14], 0, 0, 600, 600);
+       this.cuadradoDeTexto(15, 440, 280, 150, 19, 30, 470, 250, 200);
+       this.botones.botonCuadrado (470, 470+60, 475, 475+40, 60, 40);
     } 
     
-      //RATON LA RESCATA
-    else if (this.estado=="P14") {
-      image(this.imgArray[1], 0, 0, 600, 600);
-      
-    }
+   
   }
   
   botonPresionado(mousePressed) {
+
     //SIEMEPRE PONER LOS PARAMETROS!!!!!!!!!!!!!!!!!
     
     //PASA DE MENU A CREDITOS 
@@ -233,26 +256,27 @@ class Pantallas {
     }
     
     //PASA DE QUE LE DUELE LA BOCA A QUE LE DUELA LA BOCA
-    if(this.estado == "P04" && this.botones.estoyDentrodeBotonCircular (100, 500, 120/2) ){
+    if(this.estado == "P04" && this.botones.estoyDentrodeBotonCircular (100, 500, 90/2) ){
      this. estado = "P07"; 
     }
     
     //PASA DE QUE LE DUELE LA BOCA A ATENDERSE EN EL DENTISTA
-    if(this.estado == "P04" && this.botones.estoyDentrodeBotonCircular (500, 100, 120/2) ){
+    if(this.estado == "P04" && this.botones.estoyDentrodeBotonCircular (500, 90, 90/2) ){
      this. estado = "P08"; 
     }
-    
-    if(this.estado == "P06" && this.botones.estoyDentrodeBotonCircular ( 100, 70, 100/2 ) ){
+ 
+    //pasa de ayudar a ratones a aparecer en el noticiero
+    else if(this.estado == "P06" && this.botones.estoyDentrodeBotonCircular ( 100, 70, 100/2 ) ){
       this.estado = "P16";
     }
     
     //PASA DE COMPRAR CAARAMELO A QUE LE DUELE LA BOCA    
-    if(this.estado == "P07" && this.botones.estoyDentrodeBotonCircular (500, 500, 120/2) ){
+    if(this.estado == "P07" && this.botones.estoyDentrodeBotonCircular (500, 500, 90/2) ){
      this. estado = "P09"; 
     }
     
      //PASA DE COMPRAR CAARAMELO A QUE LE DUELE LA BOCA    
-    if(this.estado == "P07" && this.botones.estoyDentrodeBotonCircular (100, 100, 120/2) ){
+    if(this.estado == "P07" && this.botones.estoyDentrodeBotonCircular (100, 100, 90/2) ){
      this. estado = "P08"; 
     }
     
@@ -288,14 +312,52 @@ class Pantallas {
     
      //PASA DE EL RATON ESCUCHAR LOS GRITOS A RESCATAR A RATITA
      if (this.estado == "P13" && this.botones.estoyDentrodeBotonCuadrado(470, 470+60, 475, 475+40) ) {
-      this.estado = "P17"; //
+      this.estado = "P14"; //
     }    
     
-    //  //PASA DE RESCATAR GATITA A CASARSE
-    // if (this.estado == "P14" && this.botones.estoyDentrodeBotonCuadrado(470, 470+60, 475, 475+40) ) {
-    //  this.estado = "P15"; //
-    //}    
+      //PASA DE RESCATAR GATITA A CASARSE
+     if (this.estado == "P14" && this.botones.estoyDentrodeBotonCuadrado(470, 470+60, 475, 475+40) ) {
+      this.estado = "P15"; //
+    }    
    
+      if(this.estado == "P15" && this.botones.estoyDentrodeBotonCircular (310, 530, 90/2) ){
+     this. estado = "menu"; 
+    }
+   
+    if(this.estado == "P16" && this.botones.estoyDentrodeBotonCircular (100, 500, 90/2) ){
+     this.estado = "P17"; 
+    }
+   
+     if(this.estado == "P16" && this.botones.estoyDentrodeBotonCircular (300, 500, 90/2) ){
+     this.estado = "P18"; 
+    }
+    
+    if(this.estado == "P18" && this.botones.estoyDentrodeBotonCircular (225, 530, 90/2) ){
+     this.estado = "P19"; 
+    }
+    
+    if(this.estado == "P17" && this.botones.estoyDentrodeBotonCircular (225, 530, 90/2) ){
+     this.estado = "P19"; 
+    }
+    
+    if(this.estado == "P19" && this.botones.estoyDentrodeBotonCircular ( 520, 75, 90/2) ){
+     this.estado = "P21"; 
+    }
+    
+    if(this.estado == "P19" && this.botones.estoyDentrodeBotonCircular ( 90, 75, 90/2) ){
+     this.estado = "P20"; 
+    }
+   
+     if (this.estado == "P21" && this.botones.estoyDentrodeBotonCuadrado(470, 470+60, 475, 475+40) ) {
+      this.estado = "P15"; //
+    }    
+   
+      if(this.estado == "P20" && this.botones.estoyDentrodeBotonCircular ( 305, 400, 90/2) ){
+     this.estado = "menu"; 
+    }
+   
+              console.log(this.estado);
+
   }
   
   
