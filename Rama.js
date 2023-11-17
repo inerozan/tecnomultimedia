@@ -1,32 +1,33 @@
 class Rama{
-  
-  constructor(posY) { //DECLARO VARIABLES Y PROPIEDADES
-    //this.posX = posX;
-    //this.posY = int (random (-100, -50) );
-    //this.t = 50;
-    //this.v = random (3,6);
-  
-  
-  this.size= random(50,50);
-  this.x = random(this.size,width -this.size);
-  this.y = random(-100, -50);
-  this.imgArray = foto;
+    constructor( x ){
+    this.y = int( random(-200, -500 ) );
+    this.x = x;
+    this.t = 40;
+    this.v = random( 1, 5 );
   }
   
-  //actualizar() {
-  //  this.posY = this.posY + this.v;
-  //  //reciclar los obstaculos
-  //  if ( this.posY >= height+this.t ) {
-  //    // reinicio la posicion en y
-  //    this.posY = int( random(-100, -50 ) );
-  //    this.v = random(3,6);
-  //  }
-  //}
+  actualizar(){
+    //this.x++;  //misma velocidad porque =+1
+    this.y = this.y + this.v;  // this.x += this.v;
+    
+    // "metodo" para reciclar
+    if( this.y >= height+this.t ){
+      // reinicio la posicion en x
+      this.y = int( random(-200, -500 ) );  // se teletransporta al lado izquierdo
+      // establezco una nueva velocidad
+      this.v = random( 1, 5 );
+    }
   
-  dibujar(imgArray) {
+  }
+  
+  dibujar(){
+    push();  //buena practica cuando trabajamos con clases/objetos
+    fill( 200, 0, 0 );
+    rect( this.x, this.y + 5, this.t*2, this.t );
+    //fill( 255 );
+    //text( this.v, this.x, this.y+this.t/2 );
+    pop();
+  }
 
-  image(this.imgArray[7],this.x,this.y, this.size,this.size); 
-  }
-  
   
 }

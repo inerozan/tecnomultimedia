@@ -5,7 +5,7 @@ class Juego {
     this.ramas = []; //CREO OBJETO RAMA
     
     for (let i = 0; i<4; i++){ 
-    this.ramas[i] = new Rama(); //ARREGLO DE RAMAS
+    this.ramas.push( new Rama( i*50 + 50 ) ); //ARREGLO DE RAMAS
     }
     
     this.botones = new Botones();
@@ -40,7 +40,7 @@ else if(this.estado=="juego"){
     }
     
    let tiempoTranscurrido = millis() - this.tiempoInicio;
-   this.tj = 30 - tiempoTranscurrido / 1000;
+   this.tj = 31 - tiempoTranscurrido / 1000;
    textSize(20); 
    
    text("vidas: " + this.vidas, 90, 45);
