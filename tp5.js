@@ -15,14 +15,13 @@ function setup() {
   objJuego = new Juego(foto, texto, titulo, regular);
 }
 
-function draw() {
+function draw() { 
   background(200,200,0);
-  
   objJuego.dibujar();
 }
 
-function preload() {  
-  for( let i = 0 ; i < 6 ; i++ ){
+function preload() {    
+  for( let i = 0 ; i < 8 ; i++ ){
     foto[i] = loadImage('assets/historia'+ i +'.png');    
   } 
   
@@ -30,10 +29,13 @@ function preload() {
   
   titulo = loadFont('assets/titulo.ttf');
   
-  regular = loadFont('assets/regular.ttf');
-  
+  regular = loadFont('assets/regular.ttf');  
 }
 
 function mousePressed(){
   objJuego.botonPresionado(mousePressed); 
+}
+
+function keyPressed() {
+  objJuego.teclaPresionada(keyCode);
 }

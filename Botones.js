@@ -12,9 +12,8 @@ class Botones{
   dibujar(){ 
   }
   
-  boton(x, x1, y, y1, ancho, alto) {
+  boton(x, x1, y, y1, ancho, alto) { //METODO PARA DIBUJAR LOS BOTONES
   
-    //BOTON CREDITO REDONDO
     if (this.estoyDentrodeBoton(x, x1, y, y1) ) {
       fill(255);
     } else {
@@ -26,7 +25,7 @@ class Botones{
     this.textoBotones();
   }
   
-  textoBotones() {
+  textoBotones() { //COMO ES EL TEXTO DE LOS BOTONES
     fill(0);
     textSize(17);
     textAlign(CENTER);

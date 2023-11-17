@@ -1,4 +1,4 @@
-El principe se encuentra en el medio de una tormenta. Ayudalo a esquivar las ramas que el temporal hace que vuelen por los aires. Usa las flechas de izquierda y derecha para mover al principe!
+El principe se encuentra en el medio de una tormenta. Ayudalo a esquivar las ramas que el temporal hace que vuelen por los aires en 30 segundos. Tiene 3 vidas. Usa las flechas de izquierda y derecha para mover al principe!
 START
 CRÉDITOS
 PERDISTE
