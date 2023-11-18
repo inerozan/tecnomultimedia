@@ -6,10 +6,11 @@ class Principe{
   this.vidas = 3;
 }
 
-  dibujar(imgArray){
+  dibujar(foto){
    image(this.imgArray [6], this.x,  420, 120, 160);
-
+   this.x = constrain(this.x, 0, 480);
 }
+
    devolverVidas() {
     return this.vidas == 3;
   }

@@ -25,7 +25,7 @@ class Juego {
  crearRama(){
     this.ramas = []; //CREO OBJETO RAMA    
     for (let i = 0; i <4; i++){ 
-    this.ramas[i] = new Rama(i*200); //ARREGLO DE RAMAS
+    this.ramas[i] = new Rama(); //ARREGLO DE RAMAS
     }    
  }
  
@@ -115,7 +115,7 @@ else if (this.estado=="perdiste"){
     noStroke();
     rect(posX, posY, ancho, alto); 
     textSize(tam);
-    textAlign(CENTER);
+    //textAlign(CENTER);
     textFont(titulo);
     fill(0);
     text(this.textoArray[i], x1, y2, x3, y3);    
