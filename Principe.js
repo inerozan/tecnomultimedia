@@ -3,13 +3,16 @@ class Principe{
   constructor(){ //DECLARO VARIABLES Y PROPIEDADES
   this.x = 250;
   this.imgArray = foto;
-  //this.imgPrincipe = [6];
+  this.vidas = 3;
 }
 
   dibujar(imgArray){
    image(this.imgArray [6], this.x,  420, 120, 160);
 
 }
+   devolverVidas() {
+    return this.vidas == 3;
+  }
   
  teclaPresionada(keyCode){ //METODO PARA MOVER AL PRINCIPE CON LAS TECLAS DE DERECHA E IZQUIERDA
   

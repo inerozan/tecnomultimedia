@@ -1,13 +1,9 @@
 class Juego {
 
-  constructor( titulo, regular, x) { //DECLARO VARIABLES Y PROPIEDADES
-    this.principe = new Principe(); //CREO OBJETO PRINCIPE (PERSONAJE)
-    this.ramas = []; //CREO OBJETO RAMA
+  constructor(titulo, regular) { //DECLARO VARIABLES Y PROPIEDADES
     
-    for (let i = 0; i<4; i++){ 
-    this.ramas.push( new Rama( i*50 + 50 ) ); //ARREGLO DE RAMAS
-    }
-    
+    this.crearPrincipe();
+    this.crearRama();
     this.botones = new Botones();
     
     this.estado = "instrucciones"; 
@@ -22,7 +18,27 @@ class Juego {
     
   }
 
-  dibujar(imgArray, textos, x) {
+ crearPrincipe(){
+   this.principe = new Principe(); //CREO OBJETO PRINCIPE (PERSONAJE)   
+ }
+ 
+ crearRama(){
+    this.ramas = []; //CREO OBJETO RAMA    
+    for (let i = 0; i <4; i++){ 
+    this.ramas[i] = new Rama(i*200); //ARREGLO DE RAMAS
+    }    
+ }
+ 
+  actualizar() {
+    this.principe.devolverVidas();
+    for ( let i = 0; i < 4; i++ ) {
+      this.ramas[i].actualizar();
+      this.tj = millis() - this.tiempo;
+    }
+  }
+ 
+ 
+  dibujar(imgArray, textos) {
 if (this.estado=="instrucciones"){ //LOGICA DE ESTADOS
   this.reiniciar();
   image(this.imgArray[0], -230, 0, 1000, 600 );
@@ -33,23 +49,27 @@ if (this.estado=="instrucciones"){ //LOGICA DE ESTADOS
 
 else if(this.estado=="juego"){  
   image(this.imgArray[5], -100, 0, 1000, 600);
-  this.principe.dibujar(imgArray);
-  
-  for (let i = 0; i<4; i++){
-      this.ramas[i].dibujar();
-    }
     
+   //TIEMPO-VIDAS Y COMO APARECEN EN LA PANTALLA 
    let tiempoTranscurrido = millis() - this.tiempoInicio;
    this.tj = 31 - tiempoTranscurrido / 1000;
-   textSize(20); 
-   
+   textSize(20);    
    text("vidas: " + this.vidas, 90, 45);
    text("tiempo: " + nf(floor(this.tj), 0), 500, 45); 
    
+     //RAMAS
+     for ( let i = 0; i < 4; i++ ) {
+      this.ramas[i].dibujar();
+      this.ramas[i].actualizar();
+     }
+     
+      //PRINCIPE
+     this.principe.dibujar(imgArray);
+     this.principe.devolverVidas();
+ 
    if (this.tj <= 0) {
   this.estado = "ganaste";
 }
-
     
    if (this.vidas <= 0) {
        this.estado="ganaste";
@@ -90,10 +110,10 @@ else if (this.estado=="perdiste"){
  
   }
   
- pantalla(tam, i, x, y, ancho, alto, x1, y2, x3, y3){ //METODO PARA RESUMIR LO QUE SE VE EN UNA PANTALLA COMO EL TEXTO Y SU RECUADRO
+ pantalla(tam, i, posX, posY, ancho, alto, x1, y2, x3, y3){ //METODO PARA RESUMIR LO QUE SE VE EN UNA PANTALLA COMO EL TEXTO Y SU RECUADRO
     fill(255, 253, 229, 130);
     noStroke();
-    rect(x, y, ancho, alto); 
+    rect(posX, posY, ancho, alto); 
     textSize(tam);
     textAlign(CENTER);
     textFont(titulo);
@@ -101,14 +121,6 @@ else if (this.estado=="perdiste"){
     text(this.textoArray[i], x1, y2, x3, y3);    
 }
 
- actualizando(){
-    if(this.estado == "juego"){
-      
-      
-    }
-    
- 
- }
 
 teclaPresionada(keyCode){
  this.principe.teclaPresionada(keyCode); 

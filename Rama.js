@@ -1,33 +1,30 @@
 class Rama{
-    constructor( x ){
-    this.y = int( random(-200, -500 ) );
-    this.x = x;
-    this.t = 40;
-    this.v = random( 1, 5 );
+  
+  constructor(posX) {
+    this.posX = posX;
+    this.y = int (random (-100, -50) );
+    this.t = 50;
+    this.v = random (3,6);
+    this.colorP = color ( 0, 0, 255);
   }
   
-  actualizar(){
-    //this.x++;  //misma velocidad porque =+1
-    this.y = this.y + this.v;  // this.x += this.v;
-    
-    // "metodo" para reciclar
-    if( this.y >= height+this.t ){
-      // reinicio la posicion en x
-      this.y = int( random(-200, -500 ) );  // se teletransporta al lado izquierdo
-      // establezco una nueva velocidad
-      this.v = random( 1, 5 );
+      actualizar() {
+    this.y = this.y + this.v;
+    //reciclar los obstaculos
+    if ( this.y >= height+this.t ) {
+      // reinicio la posicion en y
+      this.y = int( random(-100, -50 ) );
+      this.v = random(3,6);  
     }
-  
+    
   }
   
-  dibujar(){
-    push();  //buena practica cuando trabajamos con clases/objetos
-    fill( 200, 0, 0 );
-    rect( this.x, this.y + 5, this.t*2, this.t );
-    //fill( 255 );
-    //text( this.v, this.x, this.y+this.t/2 );
+  dibujar() {
+    push();
+    fill (this.colorP);
+    ellipse (this.posX+100, this.y, this.t, this.t);
     pop();
+    console.log(this.posX);
   }
-
   
 }
