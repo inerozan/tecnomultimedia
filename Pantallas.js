@@ -4,6 +4,7 @@ class Pantallas {
     this.estado = "menu"; 
     this.textoArray = texto;
     this.imgArray = fondo;
+   
   }
   
   dibujar(){
@@ -190,7 +191,9 @@ class Pantallas {
       image(this.imgArray[9],  0, 0, 600, 600);
       this.cuadradoDeTexto(85, 450, 430, 140, 16, 95, 477, 410, 200 );
       this.botones.botonCircular(520, 75, 100, 255, 180); 
-      this.botones.botonCircular(70, 75, 90, 255, 180); 
+      text("Sigue", 520, 83);
+      this.botones.botonCircular(70, 75, 100, 255, 180); 
+      text("Deprimirse", 71, 83);
       
     }
 
@@ -199,6 +202,7 @@ class Pantallas {
       image(this.imgArray[16], 0, 0, 600, 600);
       this.cuadradoDeTexto(85, 460, 430, 120, 17, 98, 490, 400, 200);
       this.botones.botonCircular(305, 400, 90, 255, 180); 
+      text("MENU", 305, 408);
     }
 
     //RATITA SIGUE ADELANTE
@@ -340,11 +344,11 @@ class Pantallas {
      this.estado = "P19"; 
     }
     
-    if(this.estado == "P19" && this.botones.estoyDentrodeBotonCircular ( 520, 75, 90/2) ){
+    if(this.estado == "P19" && this.botones.estoyDentrodeBotonCircular ( 520, 75, 100/2) ){
      this.estado = "P21"; 
     }
     
-    if(this.estado == "P19" && this.botones.estoyDentrodeBotonCircular ( 90, 75, 90/2) ){
+    if(this.estado == "P19" && this.botones.estoyDentrodeBotonCircular ( 90, 75, 100/2) ){
      this.estado = "P20"; 
     }
    

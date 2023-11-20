@@ -1,3 +1,7 @@
+ //TP6
+ //Alumnas Ines Rozankovic y Dana Urquiza
+ //Legajo 91470/0
+
 let objHistoria;
 let fondo = [];
 let texto = [];
@@ -14,7 +18,7 @@ objHistoria = new Historia(fondo,texto, titulo, regular);
 
 
 function draw() {
-  background(200,200,0);
+background(200,200,0);
   
 objHistoria.dibujar();
 
@@ -22,17 +26,17 @@ objHistoria.dibujar();
 
 function preload(){
   
-  for( let i = 0 ; i < 21 ; i++ ){
+   for( let i = 0 ; i < 21 ; i++ ){
     fondo[i] = loadImage('assets/rata'+ i +'.png');
   }
   
-    texto = loadStrings('assets/texto.txt');
+   texto = loadStrings('assets/texto.txt');
   
-    bot = loadStrings('assets/bot.txt'); 
+   bot = loadStrings('assets/bot.txt'); 
     
    titulo = loadFont('assets/titulo.ttf');
    
-    regular = loadFont('assets/regular.ttf');
+   regular = loadFont('assets/regular.ttf');
 }
 
 function mousePressed(){
