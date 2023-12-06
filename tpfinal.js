@@ -3,11 +3,11 @@
  //Legajos 91470/0 - 81867/3
 
 
+//VARIABLES GLOBALES
 let objPantallas;
 let fondo = [];
 let fondoMinijuego = [];
 let texto = [];
-
 let titulo;
 let regular;
 let canasta, plata;
@@ -15,7 +15,7 @@ let canasta, plata;
 function setup() {
 createCanvas(600,600);
 
-objPantallas = new Pantallas(fondo, texto, titulo, regular, canasta, plata,fondoMinijuego);
+objPantallas = new Pantallas(fondo, texto, titulo, regular, canasta, plata, fondoMinijuego);
 
 }
 
@@ -40,8 +40,6 @@ function preload(){
   plata = loadImage ("assets/plata.png");
   
    texto = loadStrings('assets/texto.txt');
-  
-
     
    titulo = loadFont('assets/titulo.ttf');
    
@@ -51,6 +49,7 @@ function preload(){
 function mousePressed(){
   objPantallas.botonPresionado(mousePressed); 
 }
+
 function keyPressed() {
  objPantallas.Minijuego.teclaPresionada(keyCode);
 }

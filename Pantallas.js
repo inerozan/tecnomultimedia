@@ -1,14 +1,18 @@
 class Pantallas {
-  constructor(f, t, tipografia, tipo,canasta,plata,fondoMiniJ) {
+  constructor(f, t, tipografia, tipo, canasta, plata, fondoMiniJ) {
     this.botones = new Botones(t);
     this.estado = "menu";
     this.textoArray = t;
     this.imgArray = f;
-    this.imgMinijuego = fondoMinijuego;
-    this.titulo=tipografia;
-    this.regular=tipo;
+    this.imgMinijuego = fondoMiniJ; 
+    this.titulo = tipografia;
+    this.regular = tipo;
+    
+    this.botonCircular = new botonCircular(t);
+    this.botonTransparente = new botonCircularTransparente();
+    this.botonCuadrado= new botonCuadradoPuerta(t,this.textoBotones);
 
-    this.Minijuego = new Minijuego(this.estado,canasta,plata,fondoMiniJ);
+    this.Minijuego = new Minijuego(this.estado,canasta,plata,fondoMiniJ); //lo llamamos en el estado 22
   }
 
   dibujar() {
@@ -352,5 +356,11 @@ class Pantallas {
     fill(0);
     textSize(20);
     text(this.textoArray[i], x, y, xT, yT);
+  }
+  
+  textoBotones() {
+    fill(0);
+    textSize(17);
+    textAlign(CENTER);
   }
 }
