@@ -15,10 +15,9 @@ let canasta, plata;
 function setup() {
 createCanvas(600,600);
 
-objPantallas = new Pantallas(fondo, texto, titulo, regular, canasta, plata, fondoMinijuego);
+objPantallas = new Pantallas(fondo, texto, titulo, regular, canasta, plata, fondoMinijuego);  //paso variables globales al objeto para mantener orden
 
 }
-
 
 function draw() {
 background(200,200,0);
@@ -29,20 +28,17 @@ objPantallas.dibujar();
 
 function preload(){
   
-   for( let i = 0 ; i < 22 ; i++ ){
+   for( let i = 0 ; i < 22 ; i++ ){ //fondo de la historia
     fondo[i] = loadImage('assets/rata'+ i +'.png');
   }
-  for( let i = 0 ; i < 2 ; i++ ){
+  for( let i = 0 ; i < 2 ; i++ ){ //fondo de minijuego
     fondoMinijuego[i] = loadImage('assets/fondo'+ i +'.png');
   }
-  
   canasta = loadImage ("assets/canasta.png");
   plata = loadImage ("assets/plata.png");
   
    texto = loadStrings('assets/texto.txt');
-    
    titulo = loadFont('assets/titulo.ttf');
-   
    regular = loadFont('assets/regular.ttf');
 }
 

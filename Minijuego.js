@@ -64,7 +64,7 @@ class Minijuego {
     pop();
   }
 
-  reiniciarVariables() { //reinicio variables par cuando comienza el juego 
+  reiniciarVariables() { //reinicio variables par cuando comienza el juego
 
     this.objCanasta= new Canasta(width/2, 550, canasta);
     this.crearObjPlata();
